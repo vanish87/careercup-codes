@@ -8,6 +8,9 @@ namespace CareerCup
 	template <typename T>
 	class Node
 	{
+		template <typename T>
+		friend class Stack; 
+
 	public:
 		Node()
 		{
@@ -17,9 +20,18 @@ namespace CareerCup
 		{
 
 		}
+		Node(T value)
+			:value_(value), next_(nullptr)
+		{
+		}
 
+		T Value()
+		{
+			return value_;
+		}
 	private:
-		T value;
+		T value_;
+		Node<T>* next_;
 
 	};
 }
