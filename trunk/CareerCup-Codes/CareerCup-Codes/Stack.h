@@ -1,7 +1,12 @@
 #ifndef STACK_H_
 #define STACK_H_
 
+#ifndef NULL
+#define NULL 0
+#endif
+
 #pragma once
+#include "Node.h"
 
 namespace CareerCup
 {
@@ -10,6 +15,7 @@ namespace CareerCup
 	{
 	public:
 		Stack()
+			:top_(nullptr)
 		{
 
 		}
@@ -18,12 +24,28 @@ namespace CareerCup
 
 		}
 
-		T& pop();
-		void push(const T& node);
+		T Pop()
+		{
+			if(top_ != nullptr)
+			{
+				Node<T>* ret = top_;
+				top_ = top_->next_;
+				return ret->value_;
+			}
+			std::cout<<"out of stack"<<std::endl;
+			return NULL;
+		}
+
+		void Push(T& val)
+		{
+			Node<T>* node = new Node<T>(val);
+			node->next_ = top_;
+			top_ = node;
+		}
 		
 
 	private:
-		T* top;
+		Node<T>* top_;
 	};
 }
 

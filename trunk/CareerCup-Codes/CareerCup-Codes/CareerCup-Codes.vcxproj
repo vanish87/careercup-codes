@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h" />
+    <ClInclude Include="PreDec.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
