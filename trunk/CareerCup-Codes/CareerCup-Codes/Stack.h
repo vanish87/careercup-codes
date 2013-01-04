@@ -30,7 +30,9 @@ namespace CareerCup
 			{
 				Node<T>* ret = top_;
 				top_ = top_->next_;
-				return ret->value_;
+				T re = ret->value_;
+				delete ret;
+				return re;
 			}
 			std::cout<<"out of stack"<<std::endl;
 			return NULL;
