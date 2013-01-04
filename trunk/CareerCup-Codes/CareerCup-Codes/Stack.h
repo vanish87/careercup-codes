@@ -26,16 +26,17 @@ namespace CareerCup
 
 		T Pop()
 		{
+			T re;
 			if(top_ != nullptr)
 			{
 				Node<T>* ret = top_;
 				top_ = top_->next_;
-				T re = ret->value_;
+				re = ret->value_;
 				delete ret;
 				return re;
 			}
 			std::cout<<"out of stack"<<std::endl;
-			return NULL;
+			return re;
 		}
 
 		void Push(T& val)

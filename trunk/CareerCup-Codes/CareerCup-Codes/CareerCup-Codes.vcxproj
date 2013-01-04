@@ -62,11 +62,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Chapt3.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Q3_1.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Node.h" />
     <ClInclude Include="PreDec.h" />
+    <ClInclude Include="Q3_1.h" />
     <ClInclude Include="Stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
