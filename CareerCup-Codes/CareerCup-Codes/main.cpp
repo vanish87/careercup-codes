@@ -33,6 +33,7 @@ Stack<int> stack;
 std::stack<test*> std_stack;
 
 void push();
+/*
 int main(int argc, char** argv)
 {
 
@@ -41,7 +42,7 @@ int main(int argc, char** argv)
 
 	for(size_t i = 0; i < 2; i++)
 	{
-		//test a = stack.Pop();
+		test a = stack.Pop();
 		std::cout<<&(std_stack.top())<<std::endl;
 
 		//std::cout<<std_stack.top().val<<std::endl;
@@ -60,7 +61,7 @@ int main(int argc, char** argv)
 
 	system("pause");
 	return 0;
-}
+}*/
 
 void push()
 {
